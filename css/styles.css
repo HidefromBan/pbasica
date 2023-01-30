@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Poppins:wght@300&family=Shadows+Into+Light&family=Unbounded&display=swap');
+
+
+body {
+    font-family: 'Shadows Into Light', cursive;
+    background-color: #495579;
+}
+
+#seleccion-mascota{
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Unbounded', cursive;
+    font-size: 20px;
+}
+
+.titulo{
+    color: white;
+    border-radius: 20px;
+    font-size: 45px;
+    font-family: 'Unbounded', cursive
+}   
+
+.subtitulo{
+    font-size: 32px;
+    
+}
+
+.tarjetas, .botones{  /* al añadir las tarjetas en un div puedo hacerlas independientes para ordenarlas en fila, aunque el id este con flex:column */
+
+        display: flex;     
+        gap: 20px;      /* Espaciado entre las tarjetas */
+}
+
+
+.tarjeta-mokepon{           
+
+    width: 267px;
+    height: 246px;
+    background-color: beige;
+    padding: 10px;
+    box-sizing: border-box; /* esto es para que las cajitas no cambien su valor de width y height cuando se agrega margin,padding,border*/
+    border: 7px solid #909c67;
+    margin: 10px;
+    border-radius: 20px;
+    text-align: center
+  
+}
+
+.tarjeta-mokepon img {   /* Esto hace que las imagenes de la clase "tarjetas-mokepon" tengan las siguientes dimensiones */
+
+    width: 150px;
+}
+
+#boton-mascota {
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    background: transparent;
+    border: 3px solid white;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 23px;
+    margin-top: 40px; /* espaciado del boton con las tarjetas */
+    box-shadow: 5px 5px 5px black;
+}
+
+
+input {
+
+    display: none;
+}
+
+input:hover + label{
+
+    background: #ccc;
+    
+}
+
+
+#seleccion-ataque{
+   /* es display flex de esta etiqueta esta en el archivo JS*/
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Unbounded', cursive;
+
+}
+
+.btn-ataques{
+    background-color: transparent;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: transparent;
+    width: 180px;
+    height: 50px;
+    color: #B4CDE6;
+    font-family: 'Poppins', bold;
+    font-size: 25px;
+    box-shadow: 5px 5px 5px 5px #ccc;
+    
+}
+
+
+#mensajes{
+    width: 300px;
+    background: beige;
+    padding: 20px;
+    margin-top: 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    flex-direction: column;
+    box-shadow: 5px 5px 5px 5px black;
+    color: black;
+    font-family: 'Poppins', bold;
+    font-size: 20px;
+}
+ 
+#boton-reiniciar{
+
+    border: transparent;
+    color: #628E90;
+    font-size: 15px;
+    
+}
+
+.batalla{
+
+    display: grid;  
+    grid-template-columns: 100px 100px; 
+    text-align: center;
+
+}
+
+
+.seccion-jugador, .seccion-enemigo{
+     
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+}
+
+@media (max-width:890px) {
+
+    .tarjetas, .botones, .botones{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
